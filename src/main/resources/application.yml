@@ -2,10 +2,7 @@ server:
   port: 1111
 
 
-  boot:
-    admin:
-      client:
-        url: http://localhost:9090/
+  
 eureka:
   client:
     serviceUrl:
@@ -26,6 +23,23 @@ spring:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: pkdb
     password: pkdb
+  
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: pratikrajk111@gmail.com
+    password: dqvo pfoy paqv zpek
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090/
 
 # Hibernate Configuration
   jpa:
@@ -37,14 +51,5 @@ spring:
           dialect: org.hibernate.dialect.OracleDialect
           globally_quoted_identifiers: true
           
-mail:
-    host: smtp.gmail.com
-    port: 587
-    username: pratikrajk111@gmail.com
-    password: "dqvo pfoy paqv zpek" # Ensure to enclose the password in quotes if it contains spaces
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
+
+

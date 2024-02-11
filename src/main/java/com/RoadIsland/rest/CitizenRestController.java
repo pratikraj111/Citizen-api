@@ -59,8 +59,8 @@ public class CitizenRestController {
 		return "This is dashBoard";
 	}
 	
-	@GetMapping("/recover-pwd")
-	public String recoverPwd(@RequestParam String email)
+	@PostMapping("/recover-pwd")
+	public String recoverPwd(@RequestBody String email)
 	{
 		Boolean stts=citizenSerImpl.forgotPwd(email);
 		if(stts)

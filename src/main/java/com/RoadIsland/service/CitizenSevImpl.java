@@ -49,7 +49,7 @@ public class CitizenSevImpl implements CitizenSer {
 		String subject="Recover password- Pratik";
 		String body="<h1> Your Password: "+obj.getPwd()+"</h1>";
 		
-		return emailUtils.sendMail(subject, body, email);
+		return emailUtils.SendEmail(subject, body, email);
 	}
 
 }
